@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaneTextureScaler : MonoBehaviour
 {
-    private const int BASE_SCALE = 50;
+    private const int BASE_SCALE = 10;
     Material mat;
 
     private void Start()

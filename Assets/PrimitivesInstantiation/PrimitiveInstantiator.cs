@@ -8,7 +8,7 @@ namespace Assets.PrimitivesInstantiation
 {
     public static class PrimitiveInstantiator
     {
-        public static GameObject Instantiate(PrimitiveType shape, Vector3 scale)
+        public static GameObject CreatePrimitive(PrimitiveType shape, Vector3 scale)
         {
             scale = Vector3.Max(scale, Vector3.one);
             GameObject instance = GameObject.CreatePrimitive(shape);

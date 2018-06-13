@@ -9,13 +9,10 @@ public class PrimitiveCreator : MonoBehaviour
     [SerializeField] Vector3 objectScale = Vector3.one;
     [SerializeField] ShapeType primitiveShape;
 
-    private void OnGUI()
+    public void InstantiatePrimitiveElement()
     {
-        if (GUI.Button(new Rect(100, 100, 600, 240), "Instantiate"))
-        {
-            PrimitiveType shape = ConvertEnum(primitiveShape);
-            PrimitiveInstantiator.Instantiate(shape, objectScale);
-        }
+        PrimitiveType shape = ConvertEnum(primitiveShape);
+        PrimitiveInstantiator.CreatePrimitive(shape, objectScale);
     }
 
     private PrimitiveType ConvertEnum(ShapeType inputShape)
